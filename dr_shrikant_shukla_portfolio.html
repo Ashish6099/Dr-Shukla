@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Shrikant Shukla | International Tabla Maestro</title>
+<meta name="description" content="Dr. Shrikant Shukla – Internationally acclaimed Tabla Maestro, Scholar, Composer, and Cultural Ambassador. Founder of Saraswati Sangeet Academy, Lucknow. ICCR Cultural Envoy.">
+<meta name="keywords" content="Tabla Maestro, Dr. Shrikant Shukla, Saraswati Sangeet Academy, Indian Classical Music, Lucknow Gharana, Farrukhabad Gharana, ICCR, Cultural Ambassador">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer">
+<style>
+:root{
+  --gold:#D4AF37;--gold-l:#F2D06B;--gold-d:#A67C00;--gold-shine:#FFE990;
+  --maroon:#7B1C2E;--maroon-d:#3D0010;--maroon-l:#9B2C3E;
+  --ivory:#F5F0E8;--ivory-d:#E0D5C5;--cream:#FFF8E7;
+  --dark:#0A0508;--dark-b:#110810;--dark-m:#1C1020;
+  --muted:#B8A898;--border:rgba(212,175,55,0.2);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100vw;min-width:100vw}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:var(--dark);color:var(--ivory);overflow-x:hidden;position:relative;width:100vw;min-width:100vw;min-height:100vh}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--dark)}
+::-webkit-scrollbar-thumb{background:var(--gold-d);border-radius:3px}
+
+/* ── SPLASH ─────────────────────────────── */
+#splash{
+  position:fixed;inset:0;z-index:9999;
+  background:radial-gradient(ellipse at 40% 50%,var(--maroon-d) 0%,var(--dark) 65%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  overflow:hidden;transition:opacity .9s ease,visibility .9s ease;
+}
+#splash.gone{opacity:0;visibility:hidden;pointer-events:none}
+.sp-frame{position:absolute;inset:18px;border:1px solid rgba(212,175,55,.28);pointer-events:none;animation:framePulse 2.5s ease-in-out infinite alternate}
+@keyframes framePulse{to{border-color:rgba(212,175,55,.55);box-shadow:inset 0 0 60px rgba(212,175,55,.07)}}
+.sp-corner{position:absolute;width:42px;height:42px;border-color:var(--gold);border-style:solid}
+.sp-corner.tl{top:16px;left:16px;border-width:2px 0 0 2px}
+.sp-corner.tr{top:16px;right:16px;border-width:2px 2px 0 0}
+.sp-corner.bl{bottom:16px;left:16px;border-width:0 0 2px 2px}
+.sp-corner.br{bottom:16px;right:16px;border-width:0 2px 2px 0}
+.sp-particles{position:absolute;inset:0;pointer-events:none}
+.sp-p{position:absolute;border-radius:50%;opacity:0;animation:pfloat linear infinite}
+@keyframes pfloat{0%{transform:translateY(110vh) scale(0);opacity:0}10%{opacity:.9}90%{opacity:.4}100%{transform:translateY(-15vh) scale(2);opacity:0}}
+.sp-inner{display:flex;flex-direction:column;align-items:center;gap:20px;animation:spIn .9s ease .2s both}
+@keyframes spIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
+.sp-photo{
+  width:230px;height:230px;border-radius:50%;
+  background:linear-gradient(140deg,var(--maroon-d),var(--dark-m));
+  border:3px solid var(--gold);
+  box-shadow:0 0 50px rgba(212,175,55,.45),0 0 100px rgba(212,175,55,.1);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  animation:photoPulse 2.4s ease-in-out infinite;
+  position:relative;overflow:hidden;
+}
+.sp-photo::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 28%,rgba(212,175,55,.14),transparent 60%)}
+@keyframes photoPulse{0%,100%{box-shadow:0 0 50px rgba(212,175,55,.45),0 0 100px rgba(212,175,55,.1)}50%{box-shadow:0 0 70px rgba(212,175,55,.65),0 0 130px rgba(212,175,55,.2)}}
+.sp-orn{color:var(--gold);font-size:24px;letter-spacing:.5em;opacity:.7;animation:orn 3s ease-in-out infinite}
+@keyframes orn{0%,100%{opacity:.6}50%{opacity:1}}
+.sp-name{font-family:'Cinzel Decorative',serif;font-size:clamp(24px,5vw,42px);color:var(--gold);text-align:center;letter-spacing:.05em;line-height:1.25;text-shadow:0 0 35px rgba(212,175,55,.5)}
+.sp-role{font-family:'Cinzel',serif;font-size:clamp(10px,1.5vw,13px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold-l)}
+.sp-acad{font-family:'Cormorant Garamond',serif;font-size:clamp(13px,2vw,16px);color:var(--ivory);letter-spacing:.15em;opacity:.8}
+.sp-bar{width:130px;height:2px;background:rgba(212,175,55,.18);border-radius:1px;overflow:hidden;margin-top:6px}
+.sp-fill{height:100%;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:fillBar 4s linear forwards}
+@keyframes fillBar{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+
+/* ── NAVIGATION ─────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;
+  background:transparent;border-bottom:1px solid transparent;
+  transition:all .4s ease;
+}
+nav.scrolled{background:rgba(10,5,8,.96);backdrop-filter:blur(18px);border-bottom-color:var(--border)}
+.nav-logo{font-family:'Cinzel Decorative',serif;font-size:14px;color:var(--gold);text-decoration:none;line-height:1.3}
+.nav-logo span{display:block;font-family:'Cinzel',serif;font-size:9px;color:var(--gold-l);letter-spacing:.28em;font-weight:400;opacity:.85}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ivory);text-decoration:none;opacity:.75;transition:all .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
+.nav-links a:hover{opacity:1;color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:linear-gradient(135deg,var(--gold-d),var(--gold))!important;color:var(--dark)!important;padding:7px 18px!important;border-radius:2px;opacity:1!important;font-weight:600!important}
+.nav-cta::after{display:none!important}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(212,175,55,.35)!important}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.hamburger span{width:24px;height:2px;background:var(--gold);display:block;transition:.3s}
+.lang-toggle{margin-left:14px;background:transparent;border:1px solid rgba(212,175,55,.18);color:var(--gold);padding:6px 10px;border-radius:3px;cursor:pointer;font-family:'Cinzel',serif;font-size:12px}
+.mob-menu{display:none;position:fixed;inset:0;background:rgba(10,5,8,.98);z-index:1002;flex-direction:column;align-items:center;justify-content:center;gap:28px;pointer-events:auto}
+.mob-menu.open{display:flex}
+.mob-menu a{font-family:'Cinzel',serif;font-size:17px;letter-spacing:.22em;color:var(--gold);text-decoration:none;text-transform:uppercase}
+.mob-socials{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:6px;flex-wrap:wrap}
+.mob-socials .soc-a{display:inline-flex;align-items:center;justify-content:center;min-width:72px;padding:8px 12px;border:1px solid rgba(212,175,55,.24);border-radius:999px;background:rgba(255,255,255,.04);color:var(--gold);font-family:'Cinzel',serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:all .3s}
+.mob-socials .soc-a:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 8px 24px rgba(212,175,55,.18)}
+.soc-a{width:42px;height:42px;border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;font-size:16px;text-decoration:none;color:var(--gold);transition:all .3s}
+.soc-a i{font-size:16px;line-height:1}
+.soc-a:hover{background:rgba(212,175,55,.15);border-color:var(--gold);transform:translateY(-3px)}
+.mob-close{position:absolute;top:20px;right:36px;font-size:28px;color:var(--gold);cursor:pointer;background:none;border:none;z-index:1003;pointer-events:auto}
+
+/* ── SHARED COMPONENTS ───────────────────── */
+.section-lbl{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.42em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;opacity:.9}
+.sec-title{font-family:'Cinzel Decorative',serif;font-size:clamp(26px,4vw,44px);color:var(--ivory);line-height:1.2;margin-bottom:18px}
+.sec-title span{color:var(--gold)}
+.divider-gold{width:80px;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:18px auto}
+.orn-div{text-align:center;color:var(--gold);font-size:18px;letter-spacing:.5em;opacity:.55;margin:50px 0}
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.ph{
+  width:100%;background:linear-gradient(155deg,rgba(61,0,16,.7) 0%,var(--dark-m) 60%,rgba(123,28,46,.35) 100%);
+  border:1px solid rgba(212,175,55,.18);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;color:var(--gold);font-family:'Cinzel',serif;font-size:11px;letter-spacing:.18em;text-align:center;padding:20px;
+}
+.ph-ic,.ph-lb{display:none}
+.ph .ph-ic{font-size:42px;opacity:.38}
+.ph .ph-lb{opacity:.65;line-height:1.6}
+.btn-a{
+  display:inline-flex;align-items:center;gap:8px;
+  background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-l));
+  color:var(--dark);font-family:'Cinzel',serif;font-size:11px;letter-spacing:.25em;text-transform:uppercase;
+  padding:13px 28px;text-decoration:none;border-radius:2px;font-weight:600;cursor:pointer;border:none;
+  transition:all .3s;box-shadow:0 4px 20px rgba(212,175,55,.3);
+}
+.btn-a:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(212,175,55,.5)}
+.btn-b{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:var(--gold);font-family:'Cinzel',serif;font-size:11px;
+  letter-spacing:.25em;text-transform:uppercase;padding:12px 28px;text-decoration:none;
+  border-radius:2px;border:1px solid rgba(212,175,55,.5);transition:all .3s;cursor:pointer;
+}
+.btn-b:hover{background:rgba(212,175,55,.1);border-color:var(--gold);transform:translateY(-2px)}
+
+/* ── HERO ────────────────────────────────── */
+#hero{
+  min-height:100vh;
+  background:radial-gradient(ellipse at 65% 50%,rgba(123,28,46,.38) 0%,transparent 55%),
+             radial-gradient(ellipse at 20% 85%,rgba(212,175,55,.09) 0%,transparent 45%),
+             linear-gradient(175deg,var(--dark) 0%,var(--maroon-d) 55%,var(--dark) 100%);
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  padding:115px 80px 90px;gap:60px;position:relative;overflow:hidden;
+}
+.hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle at 1px 1px,rgba(212,175,55,.07) 1px,transparent 0);background-size:48px 48px;pointer-events:none}
+.hero-rings{position:absolute;right:-80px;top:50%;transform:translateY(-50%);pointer-events:none}
+.hero-rings div{position:absolute;border-radius:50%;border:1px solid rgba(212,175,55,.07);transform:translate(-50%,-50%)}
+.hero-tag{display:inline-block;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.38);padding:6px 16px;font-family:'Cinzel',serif;font-size:10px;letter-spacing:.32em;color:var(--gold);text-transform:uppercase;margin-bottom:22px;animation:fu .8s ease .4s both}
+.hero-name{font-family:'Cinzel Decorative',serif;font-size:clamp(30px,5vw,62px);line-height:1.1;color:var(--ivory);margin-bottom:14px;animation:fu .8s ease .6s both}
+.hero-name em{font-style:normal;color:var(--gold)}
+.hero-roles{font-family:'Cinzel',serif;font-size:clamp(10px,1.3vw,13px);letter-spacing:.3em;color:var(--gold-l);text-transform:uppercase;margin-bottom:30px;animation:fu .8s ease .8s both}
+.hero-desc{font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:var(--ivory-d);font-weight:300;margin-bottom:38px;max-width:520px;animation:fu .8s ease 1s both}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fu .8s ease 1.2s both}
+@keyframes fu{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.hero-img-wrap{position:relative;z-index:2;animation:fr 1s ease .5s both}
+@keyframes fr{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+.hero-frame{position:relative;max-width:420px;margin:0 auto}
+.hero-frame::before{content:'';position:absolute;inset:-12px;border:1px solid rgba(212,175,55,.28);z-index:-1;pointer-events:none}
+.hero-frame::after{content:'';position:absolute;inset:-24px;border:1px solid rgba(212,175,55,.1);z-index:-1;pointer-events:none}
+.stats-bar{background:rgba(10,5,8,.97);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats-inner{display:flex;justify-content:center;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.stat-it{padding:22px 44px;text-align:center;border-right:1px solid var(--border)}
+.stat-it:last-child{border-right:none}
+.stat-n{font-family:'Cinzel Decorative',serif;font-size:28px;color:var(--gold);display:block}
+.stat-l{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
+
+/* ── ABOUT ───────────────────────────────── */
+#about{padding:120px 80px;background:linear-gradient(180deg,var(--dark) 0%,var(--dark-m) 100%)}
+.about-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:80px;align-items:center;max-width:1200px;margin:0 auto}
+.about-img-stack{position:relative;overflow:hidden}
+.about-badge{position:absolute;top:-18px;left:-18px;width:96px;height:96px;border-radius:50%;background:linear-gradient(135deg,var(--maroon),var(--maroon-d));border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;text-align:center;padding:8px}
+.about-badge span{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.1em;color:var(--gold);line-height:1.5}
+.about-acc{position:absolute;bottom:-26px;right:-26px;width:44%;border:3px solid var(--dark)}
+.blockquote-gold{font-size:clamp(16px,2.2vw,22px);font-style:italic;color:var(--gold-l);line-height:1.75;border-left:3px solid var(--gold);padding-left:22px;margin:28px 0}
+.body-txt{font-size:clamp(15px,1.4vw,17px);line-height:1.95;color:var(--ivory-d);font-weight:300;margin-bottom:16px}
+.gurus-hd{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:36px 0 18px}
+.guru-row{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px solid rgba(212,175,55,.1)}
+.guru-ic{width:38px;height:38px;border-radius:50%;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0}
+.guru-nm{font-family:'Cinzel',serif;font-size:14px;color:var(--ivory);display:block}
+.guru-rl{font-size:12px;color:var(--muted);font-style:italic}
+
+/* ── ACHIEVEMENTS ────────────────────────── */
+#achievements{padding:120px 80px;background:var(--dark)}
+.awards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;max-width:1200px;margin:0 auto 56px}
+.award-card{background:rgba(18,8,12,.8);border:1px solid var(--border);padding:28px;position:relative;transition:all .4s;backdrop-filter:blur(8px)}
+.award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
+.award-card:hover{border-color:rgba(212,175,55,.5);transform:translateY(-6px);box-shadow:0 22px 60px rgba(0,0,0,.45),0 0 40px rgba(212,175,55,.06)}
+.award-card:hover::before{transform:scaleX(1)}
+.award-ph{width:100%;height:150px;background:linear-gradient(135deg,rgba(123,28,46,.4),rgba(18,8,12,.9));border:1px solid rgba(212,175,55,.13);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;margin-bottom:18px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.14em;color:var(--gold);opacity:.75}
+.award-ic{font-size:30px}
+.award-title{font-family:'Cinzel',serif;font-size:14px;color:var(--gold-l);margin-bottom:7px;line-height:1.45}
+.award-org{font-size:13px;color:var(--muted);font-style:italic}
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:1200px;margin:0 auto}
+.cred-card{background:linear-gradient(135deg,rgba(123,28,46,.14),rgba(18,8,12,.6));border:1px solid var(--border);padding:28px}
+.cred-card h3{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+.cred-row{display:flex;gap:11px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:flex-start}
+.cred-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0}
+.cred-txt{font-size:14px;color:var(--ivory-d);line-height:1.55}
+
+/* ── INTERNATIONAL ───────────────────────── */
+#international{padding:120px 80px;background:linear-gradient(180deg,var(--dark-m),var(--dark))}
+.intl-inner{max-width:1200px;margin:0 auto}
+.map-box{background:rgba(18,8,12,.8);border:1px solid var(--border);padding:38px;margin-bottom:54px;overflow:hidden}
+.map-ttl{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:28px}
+.world-svg{width:100%;height:auto}
+.dipl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-bottom:54px}
+.dipl-card{background:rgba(18,8,12,.7);border:1px solid rgba(212,175,55,.14);padding:22px;display:flex;gap:14px;transition:all .3s}
+.dipl-card:hover{border-color:rgba(212,175,55,.4);background:rgba(123,28,46,.15)}
+.dipl-ic{font-size:26px;flex-shrink:0}
+.dipl-card h4{font-family:'Cinzel',serif;font-size:13px;color:var(--gold-l);margin-bottom:7px;letter-spacing:.1em}
+.dipl-card p{font-size:13px;color:var(--muted);line-height:1.65}
+.events-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ev-img{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3;border-radius:16px}
+.ev-img img{width:100%;height:100%;object-fit:cover;display:block}
+.ev-ov{position:absolute;inset:0;background:transparent;display:flex;align-items:center;justify-content:center;opacity:0;transition:none;font-family:'Cinzel',serif;font-size:13px;color:var(--gold);letter-spacing:.12em;text-align:center;padding:16px;pointer-events:none}
+.ev-img:hover .ev-ov{opacity:0}
+
+/* ── EXPERTISE ───────────────────────────── */
+#expertise{padding:120px 80px;background:var(--dark)}
+.exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1200px;margin:0 auto}
+.skill-card{background:rgba(18,8,12,.65);border:1px solid rgba(212,175,55,.14);padding:32px 26px;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.skill-card::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,28,46,.3),transparent 60%);opacity:0;transition:opacity .4s}
+.skill-card:hover{border-color:rgba(212,175,55,.42);transform:translateY(-8px);box-shadow:0 22px 55px rgba(0,0,0,.42),0 0 30px rgba(212,175,55,.05)}
+.skill-card:hover::before{opacity:1}
+.sk-ic{font-size:42px;margin-bottom:18px;display:block}
+.sk-name{font-family:'Cinzel',serif;font-size:14px;color:var(--gold-l);margin-bottom:11px;letter-spacing:.1em}
+.sk-desc{font-size:13px;color:var(--muted);line-height:1.75}
+.sk-bar-wrap{margin-top:18px;height:2px;background:rgba(212,175,55,.1);border-radius:1px}
+.sk-bar{height:100%;background:linear-gradient(90deg,var(--maroon),var(--gold));border-radius:1px;width:0;transition:width 1.6s ease}
+
+/* ── COMPOSITIONS ────────────────────────── */
+#compositions{padding:120px 80px;background:linear-gradient(180deg,var(--dark-m),var(--dark))}
+.comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;max-width:1080px;margin:0 auto}
+.comp-card{background:rgba(18,8,12,.82);border:1px solid var(--border);overflow:hidden;transition:all .4s}
+.comp-card:hover{border-color:rgba(212,175,55,.48);box-shadow:0 22px 60px rgba(0,0,0,.5)}
+.vid-ph{width:100%;aspect-ratio:16/9;background:linear-gradient(135deg,var(--maroon-d),var(--dark-m));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;transition:all .3s}
+.vid-ph:hover .play-circle{background:var(--gold);color:var(--dark);transform:scale(1.1)}
+.play-circle{width:58px;height:58px;border-radius:50%;background:rgba(212,175,55,.18);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:22px;transition:all .3s}
+.vid-lbl{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.22em;color:var(--gold);opacity:.8}
+.vid-sub{font-size:12px;color:var(--muted);margin-top:-4px}
+.comp-info{padding:26px}
+.comp-title{font-family:'Cinzel Decorative',serif;font-size:19px;color:var(--gold);margin-bottom:11px}
+.comp-desc{font-size:14px;color:var(--ivory-d);line-height:1.85;font-weight:300}
+.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.ctag{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.15em;color:var(--gold);background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.28);padding:4px 11px}
+
+/* ── ACADEMY ─────────────────────────────── */
+#academy{
+  padding:120px 80px;
+  background:radial-gradient(ellipse at 50% 0%,rgba(123,28,46,.28) 0%,transparent 55%),var(--dark)
+}
+.acad-inner{max-width:1200px;margin:0 auto}
+.acad-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;margin-bottom:70px;align-items:center}
+.acad-since{display:inline-block;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);padding:7px 18px;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.3em;color:var(--gold);margin-bottom:22px}
+.acad-txt{font-size:clamp(15px,1.4vw,17px);line-height:1.95;color:var(--ivory-d);font-weight:300}
+.acad-txt p{margin-bottom:14px}
+.courses-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:54px}
+.course-card{background:rgba(18,8,12,.7);border:1px solid rgba(212,175,55,.14);padding:22px 14px;text-align:center;transition:all .3s}
+.course-card:hover{border-color:rgba(212,175,55,.42);background:rgba(123,28,46,.2);transform:translateY(-4px)}
+.co-ic{font-size:30px;margin-bottom:10px;display:block}
+.co-name{font-family:'Cinzel',serif;font-size:12px;color:var(--ivory);letter-spacing:.1em;line-height:1.4}
+.certs{background:rgba(18,8,12,.6);border:1px solid var(--border);padding:38px;margin-bottom:54px}
+.certs h3{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:28px}
+.certs-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.cert-it{background:rgba(255,255,255,.03);border:1px solid rgba(212,175,55,.1);padding:18px;text-align:center;font-family:'Cinzel',serif;font-size:12px;color:var(--ivory-d);letter-spacing:.1em;line-height:1.7}
+.cta-box{text-align:center;padding:56px;background:linear-gradient(135deg,rgba(123,28,46,.3),rgba(18,8,12,.82));border:1px solid var(--border)}
+.cta-box h3{font-family:'Cinzel Decorative',serif;font-size:clamp(20px,3vw,30px);color:var(--ivory);margin-bottom:14px}
+.cta-box p{font-size:16px;color:var(--muted);margin-bottom:28px;font-style:italic}
+
+/* ── GALLERY ─────────────────────────────── */
+#gallery{padding:120px 80px;background:var(--dark-m)}
+.gal-tabs-wrap{text-align:center;margin-bottom:36px}
+.gal-tabs{display:inline-flex;border:1px solid var(--border)}
+.gal-tab{padding:11px 26px;font-family:'Cinzel',serif;font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);cursor:pointer;border:none;background:transparent;transition:all .3s;border-right:1px solid var(--border)}
+.gal-tab:last-child{border-right:none}
+.gal-tab.active,.gal-tab:hover{background:rgba(212,175,55,.1);color:var(--gold)}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;max-width:1200px;margin:0 auto}
+.gal-item{position:relative;overflow:hidden;cursor:pointer;min-height:220px;background:rgba(10,5,8,.3);display:flex;align-items:center;justify-content:center}
+.gal-item.feat{grid-column:span 2;grid-row:span 2;min-height:340px}
+.gal-item img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.gal-ov{position:absolute;inset:0;background:transparent;display:flex;align-items:center;justify-content:center;opacity:0;transition:none;font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:.14em;text-align:center;padding:18px;pointer-events:none}
+.gal-item:hover .gal-ov{opacity:0}
+@media(max-width:1100px){
+  .gal-grid{grid-template-columns:repeat(3,1fr)}
+  .gal-item.feat{grid-column:span 3}
+}
+@media(max-width:760px){
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-item.feat{grid-column:span 2}
+  .gal-item{min-height:220px}
+}
+@media(max-width:520px){
+  .gal-grid{grid-template-columns:1fr}
+  .gal-item.feat{grid-column:span 1}
+  .gal-item{min-height:200px}
+}
+
+/* ── TESTIMONIALS ────────────────────────── */
+#testimonials{padding:120px 80px;background:var(--dark)}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;max-width:1200px;margin:0 auto}
+.testi-card{background:rgba(18,8,12,.72);border:1px solid rgba(212,175,55,.14);padding:34px;position:relative;transition:all .4s}
+.testi-card:hover{border-color:rgba(212,175,55,.35);transform:translateY(-5px)}
+.qt{font-family:Georgia,serif;font-size:72px;color:rgba(212,175,55,.14);line-height:.45;margin-bottom:18px;display:block}
+.testi-txt{font-size:15px;font-style:italic;color:var(--ivory-d);line-height:1.85;margin-bottom:22px}
+.testi-rule{width:36px;height:1px;background:var(--gold);margin-bottom:18px;opacity:.5}
+.testi-auth{display:flex;align-items:center;gap:12px}
+.auth-av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--maroon),var(--dark));border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.auth-nm{font-family:'Cinzel',serif;font-size:13px;color:var(--gold-l);margin-bottom:3px}
+.auth-rl{font-size:12px;color:var(--muted);font-style:italic}
+
+/* ── CONTACT ─────────────────────────────── */
+#contact{padding:120px 80px;background:linear-gradient(180deg,var(--dark-m),var(--dark))}
+.ct-inner{max-width:1080px;margin:0 auto}
+.ct-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:56px}
+.ct-info h3{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+.ct-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(212,175,55,.1);align-items:flex-start}
+.ct-ic{font-size:18px;flex-shrink:0;margin-top:2px}
+.ct-lbl{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:3px}
+.ct-val{font-size:14px;color:var(--ivory-d)}
+.socials{display:flex;gap:10px;margin-top:36px}
+.soc-a{width:42px;height:42px;border:1px solid rgba(212,175,55,.3);display:flex;align-items:center;justify-content:center;font-size:16px;font-family:'Cinzel',serif;text-decoration:none;color:var(--gold);transition:all .3s}
+.soc-a:hover{background:rgba(212,175,55,.15);border-color:var(--gold);transform:translateY(-3px)}
+.avail-box{margin-top:36px;background:rgba(212,175,55,.05);border:1px solid var(--border);padding:22px}
+.avail-box-hd{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.avail-tags{display:flex;flex-wrap:wrap;gap:7px}
+.a-tag{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.14em;color:var(--ivory);background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.2);padding:5px 11px}
+.ct-form{background:rgba(18,8,12,.72);border:1px solid var(--border);padding:38px}
+.ct-form h3{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:28px}
+.fg{margin-bottom:18px}
+.fg label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:7px;opacity:.82}
+.fg input,.fg select,.fg textarea{
+  width:100%;background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.2);
+  padding:11px 14px;color:var(--ivory);font-family:'Cormorant Garamond',serif;font-size:15px;
+  transition:border-color .3s;outline:none;
+}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(212,175,55,.58);background:rgba(212,175,55,.04)}
+.fg select option{background:var(--dark)}
+.fg textarea{height:105px;resize:vertical}
+.fg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ── FOOTER ──────────────────────────────── */
+footer{background:var(--dark);border-top:1px solid rgba(212,175,55,.14);padding:56px 80px 28px}
+.ft-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:38px;max-width:1200px;margin:0 auto 46px}
+.ft-logo{font-family:'Cinzel Decorative',serif;font-size:15px;color:var(--gold);display:block;margin-bottom:6px}
+.ft-tl{font-family:'Cinzel',serif;font-size:9px;letter-spacing:.22em;color:var(--muted);margin-bottom:18px}
+.ft-p{font-size:13px;color:var(--muted);line-height:1.75}
+.ft-col h4{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.ft-col ul{list-style:none}
+.ft-col ul li{margin-bottom:9px}
+.ft-col ul li a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .3s}
+.ft-col ul li a:hover{color:var(--gold)}
+.ft-bot{text-align:center;padding-top:26px;border-top:1px solid rgba(212,175,55,.1);font-size:12px;color:var(--muted)}
+.ft-bot .gd{color:var(--gold)}
+
+/* ── RESPONSIVE ──────────────────────────── */
+@media(max-width:1060px){
+  #hero{grid-template-columns:1fr;padding:115px 44px 90px;overflow:hidden}
+  .hero-img-wrap{display:none}
+  .hero-rings{right:-20px}
+  .hero-content{max-width:760px;margin:0 auto;text-align:center}
+  .hero-btns{justify-content:center}
+  .hero-desc{margin-left:auto;margin-right:auto}
+  #about,#achievements,#international,#expertise,#compositions,#academy,#gallery,#testimonials,#contact{padding:80px 44px}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .comp-grid{grid-template-columns:1fr}
+  .acad-intro{grid-template-columns:1fr}
+  .ct-grid{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:repeat(2,1fr)}
+  .gal-item.feat{grid-column:span 2}
+  .cred-grid{grid-template-columns:1fr}
+  nav{padding:0 24px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .ft-grid{grid-template-columns:1fr 1fr}
+  footer{padding:50px 44px 24px}
+  .events-row{grid-template-columns:1fr}
+  .stats-inner{flex-wrap:wrap;justify-content:center}
+  .stat-it{flex:1 1 50%;border-bottom:1px solid var(--border)}
+}
+@media(max-width:640px){
+  .gal-grid{grid-template-columns:1fr}
+  .gal-item.feat{grid-column:span 1}
+  .stat-it{flex:1 1 100%;border-right:none}
+
+  #hero,#about,#achievements,#international,#expertise,#compositions,#academy,#gallery,#testimonials,#contact,footer{padding:65px 20px;max-width:100%;width:100%;overflow-x:hidden}
+  footer{padding:44px 20px 20px}
+  .ft-grid{grid-template-columns:1fr}
+  .fg-row{grid-template-columns:1fr}
+  .stat-it{padding:16px 22px}
+
+  nav{padding:0 20px;height:auto;align-items:center;justify-content:space-between;flex-wrap:wrap;display:flex}
+  .nav-logo{max-width:calc(100% - 55px);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:normal;}
+  .hamburger{order:2}
+
+  .gal-tabs-wrap{overflow-x:auto;padding:0 10px;}
+  .gal-tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:0;width:100%;min-width:0}
+  .gal-tab{flex:1 1 min(45%,140px);min-width:110px;max-width:calc(50% - 10px);padding:11px 16px;white-space:nowrap;}
+
+  .about-img-stack{overflow:hidden}
+  .about-badge{left:8px;top:8px}
+  .about-acc{right:8px;bottom:8px;width:48%}
+}
+.top-btn{
+  position:fixed;right:24px;bottom:24px;z-index:1005;
+  width:52px;height:52px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-d),var(--gold));
+  color:var(--dark);display:flex;align-items:center;justify-content:center;
+  font-size:24px;box-shadow:0 16px 32px rgba(0,0,0,.35);
+  border:none;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);
+  transition:opacity .3s ease,transform .3s ease,visibility .3s ease;
+}
+.top-btn.show{opacity:1;visibility:visible;transform:translateY(0)}
+.top-btn:hover{transform:translateY(-2px);box-shadow:0 20px 36px rgba(0,0,0,.4)}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     SPLASH SCREEN
+══════════════════════════════ -->
+<div id="splash">
+  <audio id="splashAudio" preload="auto" loop playsinline>
+    <source src="uploads/audio/tabla splash.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+  </audio>
+  <div class="sp-particles" id="spParticles"></div>
+  <div class="sp-frame"></div>
+  <div class="sp-corner tl"></div><div class="sp-corner tr"></div>
+  <div class="sp-corner bl"></div><div class="sp-corner br"></div>
+  <div class="sp-inner">
+    <div class="sp-photo">
+      <img src="uploads/img/Splash.avif" alt="Dr. Shrikant Shukla" style="width:100%;height:100%;object-fit:cover;border-radius:50%">
+    </div>
+    <div class="sp-orn">❧ ✦ ❧</div>
+    <div class="sp-name">Dr. Shrikant<br>Shukla</div>
+    <div class="sp-role">International Tabla Maestro</div>
+    <div class="sp-acad">Saraswati Sangeet Academy · Est. 2002</div>
+    <div class="sp-bar"><div class="sp-fill"></div></div>
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mobMenu">
+  <button type="button" class="mob-close" id="mobClose">✕</button>
+  <a href="#about" onclick="closeMob()" data-i18n="about_link" data-i18n-default="About">About</a>
+  <a href="#achievements" onclick="closeMob()" data-i18n="awards_link" data-i18n-default="Awards">Awards</a>
+  <a href="#international" onclick="closeMob()" data-i18n="international_link" data-i18n-default="International">International</a>
+  <a href="#expertise" onclick="closeMob()" data-i18n="expertise_link" data-i18n-default="Expertise">Expertise</a>
+  <a href="#compositions" onclick="closeMob()" data-i18n="compositions_link" data-i18n-default="Compositions">Compositions</a>
+  <a href="#academy" onclick="closeMob()" data-i18n="academy_link" data-i18n-default="Academy">Academy</a>
+  <a href="#gallery" onclick="closeMob()" data-i18n="gallery_link" data-i18n-default="Gallery">Gallery</a>
+  <a href="#contact" onclick="closeMob()" data-i18n="contact_link" data-i18n-default="Contact">Contact</a>
+  <div class="mob-socials">
+    <a href="https://www.youtube.com/@PercussionistShriKantShukla" class="soc-a" title="YouTube" target="_blank" rel="noopener" onclick="closeMob()"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.facebook.com/shrikant.shukla.5" class="soc-a" title="Facebook" target="_blank" rel="noopener" onclick="closeMob()"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="https://wa.me/919839092023" class="soc-a" title="WhatsApp" target="_blank" rel="noopener" onclick="closeMob()"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <a href="#hero" class="nav-logo">Dr. Shrikant Shukla
+    <span>Tabla Maestro · Scholar · Cultural Ambassador</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#achievements">Awards</a></li>
+    <li><a href="#international">International</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#compositions">Compositions</a></li>
+    <li><a href="#academy">Academy</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button type="button" class="hamburger" id="hamBtn" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════════════════
+     HERO
+══════════════════════════════ -->
+<section id="hero">
+  <div class="hero-dots"></div>
+  <div class="hero-rings">
+    <div style="width:700px;height:700px;top:50%;left:50%"></div>
+    <div style="width:560px;height:560px;top:50%;left:50%"></div>
+    <div style="width:420px;height:420px;top:50%;left:50%"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag">✦ ICCR Cultural Envoy · Lucknow Gharana · AIR B-High Grade</div>
+    <h1 class="hero-name">Dr. <em>Shrikant</em><br>Shukla</h1>
+    <div class="hero-roles">International Tabla Maestro &nbsp;·&nbsp; Scholar &nbsp;·&nbsp; Composer &nbsp;·&nbsp; Cultural Ambassador</div>
+    <p class="hero-desc">
+      An internationally acclaimed Tabla virtuoso of the Lucknow Gharana, specializing in Tabla, Dholak, and Naal. He holds M.Mus., NET, and a Ph.D. in Tabla under Pt. Prof. Mukund Narayan Bhale, and is a B-High Grade artist of All India Radio as well as a member of the Uttar Pradesh Sangeet Natak Akademi.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-a">🎭 Book Performance</a>
+      <a href="#academy" class="btn-b">🎵 Join Academy</a>
+    </div>
+  </div>
+
+  <div class="hero-img-wrap">
+    <div class="hero-frame">
+      <img src="uploads/img/hero-portrait.avif" alt="Dr. Shrikant Shukla portrait" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-it"><span class="stat-n">20+</span><span class="stat-l">Years Excellence</span></div>
+    <div class="stat-it"><span class="stat-n">50+</span><span class="stat-l">International Stages</span></div>
+    <div class="stat-it"><span class="stat-n">PhD</span><span class="stat-l">Tabla Scholar</span></div>
+    <div class="stat-it" style="border-right:none"><span class="stat-n">2002</span><span class="stat-l">Academy Founded</span></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════
+     ABOUT
+══════════════════════════════ -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-stack reveal">
+      <div class="about-badge"><span>ICCR<br>Cultural<br>Envoy</span></div>
+      <div class="ph" style="aspect-ratio:3/4;min-height:380px">
+             <img src="uploads/img/about-portrait.avif" alt="Dr. Shrikant Shukla portrait" style="width:100%;height:100%;object-fit:cover;border-radius:14px">
+
+      </div>
+      <div class="ph about-acc" style="aspect-ratio:1;min-height:180px;overflow:hidden">
+        <img src="uploads/img/performance-photo.jpeg" alt="Performance photo" style="width:100%;height:100%;object-fit:cover;border-radius:8px;display:block;">
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="section-lbl">✦ About the Maestro</div>
+      <h2 class="sec-title">A Life Devoted to<br><span>Rhythmic Mastery</span></h2>
+      <blockquote class="blockquote-gold">"Music is not merely performance; it is a lifelong discipline, a medium of cultural dialogue, and a pathway to personal transformation."</blockquote>
+      <p class="body-txt">Born and raised in the culturally rich city of Lucknow, Dr. Shrikant Shukla discovered his passion for percussion at the age of seven. His musical journey began under the traditional <em>Guru-Shishya Parampara</em>, and he received rigorous gharana training from Khalifa Ustad Ilmas Hussain Khan, a distinguished master of the Lucknow Tabla tradition.</p>
+      <p class="body-txt">Dr. Shukla is an accomplished Tabla artist specializing in Tabla, Dholak, and Naal. He holds M.Mus., NET, and a Ph.D. in Tabla from Bhatkhande Music Institute Deemed University, completed under the guidance of Pt. Prof. Mukund Narayan Bhale.</p>
+      <p class="body-txt">He is a member of the Uttar Pradesh Sangeet Natak Akademi and recipient of the UP Sangeet Natak Akademi Samman. A B-High Grade Artist of All India Radio and former member of the National Kathak Sansthan, Lucknow (now Birju Maharaj Sansthan), he is also a National Fellowship awardee from CCRT, Ministry of Culture, Government of India.</p>
+      <p class="body-txt">Dr. Shukla has authored the book <em>“Khalifa Ustad Afaq Hussain Khan and His Personality.”</em> He has performed at prestigious national events such as Maihar Mahotsav, Taj Mahotsav, Kumbh, Ramotsav, Defence Expo, G-20 events, UP Summit, and other renowned cultural platforms.</p>
+      <p class="body-txt">He has served as Guest Faculty (Music) at Babasaheb Bhimrao Ambedkar Central University, Lucknow, and continues to evaluate emerging talent as an examiner for Bhatkhande Sanskriti Vishwavidyalaya, Indira Kala Sangeet Vishwavidyalaya, and numerous other government and private universities across India.</p>
+      <div class="gurus-hd">✦ Esteemed Gurus & Mentors</div>
+      <div class="guru-row"><div class="guru-ic">🎵</div><div><span class="guru-nm">Ustad Azim Khan</span><span class="guru-rl">Primary Guru · Tabla Maestro</span></div></div>
+      <div class="guru-row"><div class="guru-ic">🎵</div><div><span class="guru-nm">Ustad Ilmas Hussain Khan</span><span class="guru-rl">Guru-Shishya Parampara · Classical Training</span></div></div>
+      <div class="guru-row"><div class="guru-ic">🎵</div><div><span class="guru-nm">Pandit Mukund Narayan Bhale</span><span class="guru-rl">Advanced Studies · Rhythmic Research</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     ACHIEVEMENTS
+══════════════════════════════ -->
+<section id="achievements">
+  <div style="text-align:center;margin-bottom:68px" class="reveal">
+    <div class="section-lbl">✦ Recognition & Honors</div>
+    <h2 class="sec-title">Awards &amp; <span>Distinctions</span></h2>
+    <div class="divider-gold"></div>
+  </div>
+
+  <div class="awards-grid">
+    <div class="award-card reveal">
+      <div class="award-ph"><div class="award-ic">🏆</div><span>Award Certificate Image</span></div>
+      <div class="award-title">DD Lucknow Lifetime Achievement Award</div>
+      <div class="award-org">Doordarshan Lucknow · National Television</div>
+    </div>
+    <div class="award-card reveal">
+      <div class="award-ph"><div class="award-ic">🎖️</div><span>Award Ceremony Image</span></div>
+      <div class="award-title">Uttar Pradesh Sangeet Natak Akademi Samman</div>
+      <div class="award-org">Uttar Pradesh Government · State Arts Honour</div>
+    </div>
+    <div class="award-card reveal">
+      <div class="award-ph"><div class="award-ic">📻</div><span>AIR Recognition Image</span></div>
+      <div class="award-title">AIR B-High Grade Artist</div>
+      <div class="award-org">All India Radio · National Broadcast Recognition</div>
+    </div>
+    <div class="award-card reveal">
+      <div class="award-ph"><div class="award-ic">🎓</div><span>National Fellowship Image</span></div>
+      <div class="award-title">CCRT National Fellowship</div>
+      <div class="award-org">Ministry of Culture · Government of India</div>
+    </div>
+    <div class="award-card reveal">
+      <div class="award-ph"><div class="award-ic">🎓</div><span>Academic Achievement Image</span></div>
+      <div class="award-title">UGC-NET Qualified Scholar</div>
+      <div class="award-org">University Grants Commission · National Eligibility</div>
+    </div>
+  </div>
+
+  <div class="orn-div">— ❧ ✦ ❧ —</div>
+
+  <div style="max-width:1200px;margin:0 auto">
+    <h3 style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:36px">Academic Excellence &amp; Credentials</h3>
+    <div class="cred-grid">
+      <div class="cred-card reveal">
+        <h3>Academic Qualifications</h3>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Ph.D. in Tabla — Bhatkhande Music Institute Deemed University</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">M.Mus. — Advanced studies in Indian classical performance</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">UGC-NET Qualified Researcher</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Editor, Sangeetanjali Magazine</div></div>
+      </div>
+      <div class="cred-card reveal">
+        <h3>National Distinctions</h3>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Member — Uttar Pradesh Sangeet Natak Akademi</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Recipient — UP Sangeet Natak Akademi Samman</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">National Fellowship — CCRT, Ministry of Culture, Government of India</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Author of “Khalifa Ustad Afaq Hussain Khan and His Personality”</div></div>
+      </div>
+      <div class="cred-card reveal">
+        <h3>Examiner &amp; Academic Roles</h3>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Academic Examiner — Indira Kala Sangeet Vishwavidyalaya</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Academic Examiner — Bhatkhande Music Institute</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Guest Faculty, Babasaheb Bhimrao Ambedkar Central University, Lucknow</div></div>
+        <div class="cred-row"><div class="cred-dot"></div><div class="cred-txt">Examiner for government and private universities across India</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     INTERNATIONAL PRESENCE
+══════════════════════════════ -->
+<section id="international">
+  <div class="intl-inner">
+    <div style="text-align:center;margin-bottom:54px" class="reveal">
+      <div class="section-lbl">✦ Global Reach</div>
+      <h2 class="sec-title">International <span>Cultural Diplomacy</span></h2>
+      <div class="divider-gold"></div>
+      <p style="max-width:580px;margin:0 auto;font-size:17px;color:var(--muted);line-height:1.85;font-style:italic">
+        Representing India on prestigious diplomatic platforms and cultural forums across the globe, bridging civilisations through the universal language of rhythm.
+      </p>
+    </div>
+
+    <!-- SVG World Map -->
+    <div class="map-box reveal">
+      <div class="map-ttl">✦ GLOBAL PERFORMANCE FOOTPRINT ✦</div>
+      <svg class="world-svg" viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="mapGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="rgba(212,175,55,0.06)"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </radialGradient>
+        </defs>
+        <rect width="1000" height="480" fill="url(#mapGlow)"/>
+        <!-- Gridlines -->
+        <line x1="0" y1="240" x2="1000" y2="240" stroke="rgba(212,175,55,.07)" stroke-width="1"/>
+        <line x1="500" y1="0" x2="500" y2="480" stroke="rgba(212,175,55,.07)" stroke-width="1"/>
+        <!-- Continents (simplified stylised shapes) -->
+        <!-- North America -->
+        <path d="M90,80 L70,110 L60,155 L75,195 L120,215 L155,225 L175,205 L195,175 L215,145 L205,115 L185,85 L155,75 Z" fill="rgba(123,28,46,.35)" stroke="rgba(212,175,55,.32)" stroke-width="1.2"/>
+        <!-- South America -->
+        <path d="M175,235 L155,265 L145,308 L155,358 L175,385 L195,368 L215,338 L225,298 L215,258 L195,235 Z" fill="rgba(123,28,46,.35)" stroke="rgba(212,175,55,.32)" stroke-width="1.2"/>
+        <!-- Europe -->
+        <path d="M430,65 L415,92 L432,114 L455,124 L488,114 L506,92 L495,68 L465,58 Z" fill="rgba(123,28,46,.35)" stroke="rgba(212,175,55,.32)" stroke-width="1.2"/>
+        <!-- Africa -->
+        <path d="M435,138 L415,168 L414,230 L424,292 L454,332 L487,322 L508,282 L518,232 L508,172 L488,140 Z" fill="rgba(123,28,46,.35)" stroke="rgba(212,175,55,.32)" stroke-width="1.2"/>
+        <!-- Asia + India highlighted -->
+        <path d="M508,68 L518,95 L558,108 L618,96 L678,85 L718,96 L738,125 L718,155 L678,175 L638,194 L598,204 L558,194 L528,172 L508,140 L498,110 Z" fill="rgba(123,28,46,.35)" stroke="rgba(212,175,55,.32)" stroke-width="1.2"/>
+        <!-- India highlight -->
+        <path d="M608,148 L596,175 L596,218 L612,246 L632,240 L648,215 L653,178 L638,152 Z" fill="rgba(212,175,55,.28)" stroke="rgba(212,175,55,.65)" stroke-width="1.8"/>
+        <!-- SE Asia -->
+        <path d="M700,155 L720,170 L730,200 L720,220 L700,215 L685,195 L688,170 Z" fill="rgba(123,28,46,.3)" stroke="rgba(212,175,55,.25)" stroke-width="1"/>
+        <!-- Australia -->
+        <path d="M740,272 L720,292 L718,332 L748,362 L788,362 L818,342 L828,302 L808,272 L778,262 Z" fill="rgba(123,28,46,.35)" stroke="rgba(212,175,55,.32)" stroke-width="1.2"/>
+
+        <!-- Pulse rings helper: India / Lucknow = home base -->
+        <circle cx="622" cy="194" r="22" fill="none" stroke="rgba(212,175,55,.22)" stroke-width="1">
+          <animate attributeName="r" values="14;26;14" dur="2.2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values=".55;.08;.55" dur="2.2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="622" cy="194" r="8" fill="rgba(212,175,55,.95)" stroke="rgba(255,230,128,.6)" stroke-width="2.5"/>
+        <text x="622" y="218" text-anchor="middle" fill="rgba(212,175,55,.9)" font-size="10" font-family="Cinzel,serif" letter-spacing="1.2">LUCKNOW</text>
+
+        <!-- UK -->
+        <circle cx="448" cy="86" r="5" fill="rgba(212,175,55,.75)" stroke="rgba(212,175,55,.4)" stroke-width="2"/>
+        <circle cx="448" cy="86" r="14" fill="none" stroke="rgba(212,175,55,.2)" stroke-width="1"><animate attributeName="r" values="11;18;11" dur="2.6s" repeatCount="indefinite"/></circle>
+        <text x="448" y="107" text-anchor="middle" fill="rgba(212,175,55,.72)" font-size="9" font-family="Cinzel,serif">UK</text>
+
+        <!-- USA -->
+        <circle cx="145" cy="148" r="5" fill="rgba(212,175,55,.75)" stroke="rgba(212,175,55,.4)" stroke-width="2"/>
+        <circle cx="145" cy="148" r="14" fill="none" stroke="rgba(212,175,55,.2)" stroke-width="1"><animate attributeName="r" values="11;18;11" dur="3.1s" repeatCount="indefinite"/></circle>
+        <text x="145" y="168" text-anchor="middle" fill="rgba(212,175,55,.72)" font-size="9" font-family="Cinzel,serif">USA</text>
+
+        <!-- Trinidad -->
+        <circle cx="228" cy="195" r="4" fill="rgba(212,175,55,.7)" stroke="rgba(212,175,55,.38)" stroke-width="2"/>
+        <text x="228" y="213" text-anchor="middle" fill="rgba(212,175,55,.68)" font-size="8" font-family="Cinzel,serif">TRINIDAD</text>
+
+        <!-- Mauritius -->
+        <circle cx="568" cy="305" r="4" fill="rgba(212,175,55,.7)" stroke="rgba(212,175,55,.38)" stroke-width="2"/>
+        <text x="568" y="323" text-anchor="middle" fill="rgba(212,175,55,.68)" font-size="9" font-family="Cinzel,serif">MAURITIUS</text>
+
+        <!-- UAE -->
+        <circle cx="572" cy="172" r="4" fill="rgba(212,175,55,.7)" stroke="rgba(212,175,55,.38)" stroke-width="2"/>
+        <text x="572" y="190" text-anchor="middle" fill="rgba(212,175,55,.68)" font-size="9" font-family="Cinzel,serif">UAE</text>
+
+        <!-- Europe / Germany area -->
+        <circle cx="478" cy="96" r="4" fill="rgba(212,175,55,.65)" stroke="rgba(212,175,55,.35)" stroke-width="1.5"/>
+        <text x="478" y="114" text-anchor="middle" fill="rgba(212,175,55,.65)" font-size="8" font-family="Cinzel,serif">EUROPE</text>
+      </svg>
+      <div style="text-align:center;margin-top:18px;font-family:'Cinzel',serif;font-size:10px;color:var(--gold);letter-spacing:.22em;opacity:.7">
+        ● PERFORMANCE DESTINATIONS &nbsp;&nbsp; ◉ HOME BASE — LUCKNOW, INDIA
+      </div>
+    </div> -
+
+    <div class="dipl-grid">
+      <div class="dipl-card reveal"><div class="dipl-ic">🏛️</div><div><h4>ICCR Cultural Envoy</h4><p>Appointed Indian Cultural Envoy through the Indian Council for Cultural Relations, representing India's classical arts heritage globally.</p></div></div>
+      <div class="dipl-card reveal"><div class="dipl-ic">🌐</div><div><h4>Mahatma Gandhi Institute</h4><p>Serving as Cultural Expert and Indian Classical Music Envoy at the Mahatma Gandhi Institute for Cultural Co-operation.</p></div></div>
+      <div class="dipl-card reveal"><div class="dipl-ic">🤝</div><div><h4>Distinguished Associations</h4><p>Performances at diplomatic receptions featuring S. Jaishankar and former Trinidad PM Kamla Persad-Bissessar.</p></div></div>
+      <div class="dipl-card reveal"><div class="dipl-ic">🎭</div><div><h4>International Workshops</h4><p>Masterclasses, cultural exchange programmes, and research lectures for scholars, musicians, and global audiences worldwide.</p></div></div>
+    </div>
+
+    <h3 style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;text-align:center">International Events Gallery</h3>
+    <div class="events-row reveal">
+      <div class="ev-img"><img src="uploads/img/IEG 3.avif" ><div class="ph" style="aspect-ratio:4/3"><div class="ph-ic">🌍</div><div class="ph-lb"><br><small style="font-size:10px;opacity:.55">Event Photo</small></div></div><div class="ev-ov"></div></div>
+      <div class="ev-img"><img src="uploads/img/IEG2.avif" ><div class="ph" style="aspect-ratio:4/3"><div class="ph-ic">🎪</div><div class="ph-lb"><br><small style="font-size:10px;opacity:.55">Event Photo</small></div></div><div class="ev-ov"></div></div>
+      <div class="ev-img"><img src="uploads/img/IEG 1.avif" ><div class="ph" style="aspect-ratio:4/3"><div class="ph-ic">🎓</div><div class="ph-lb"><br><small style="font-size:10px;opacity:.55">Event Photo</small></div></div><div class="ev-ov"></div></div>
+     
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="https://www.facebook.com/shrikant.shukla.5/photos" class="btn-b" target="_blank" rel="noopener">More</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     MUSICAL EXPERTISE
+══════════════════════════════ -->
+<section id="expertise">
+  <div style="text-align:center;margin-bottom:68px" class="reveal">
+    <div class="section-lbl">✦ Artistry & Mastery</div>
+    <h2 class="sec-title">Areas of <span>Musical Expertise</span></h2>
+    <div class="divider-gold"></div>
+  </div>
+  <div class="exp-grid">
+    <div class="skill-card reveal"><span class="sk-ic">🥁</span><div class="sk-name">Tabla Solo Performance</div><p class="sk-desc">Virtuosic solo performances spanning intricate compositions of the Lucknow and Farrukhabad Gharanas with unparalleled tonal clarity and expressive depth.</p><div class="sk-bar-wrap"><div class="sk-bar" data-w="98"></div></div></div>
+    <div class="skill-card reveal"><span class="sk-ic">🎵</span><div class="sk-name">Lucknow Gharana Repertoire</div><p class="sk-desc">Deep command of the expressive, lyrical aesthetics and intricate compositions of the illustrious Lucknow Gharana tradition.</p><div class="sk-bar-wrap"><div class="sk-bar" data-w="95"></div></div></div>
+    <div class="skill-card reveal"><span class="sk-ic">🎼</span><div class="sk-name">Farrukhabad Gharana</div><p class="sk-desc">Mastery of the Farrukhabad style, with its rich emphasis on mathematical precision and rhythmic innovation.</p><div class="sk-bar-wrap"><div class="sk-bar" data-w="95"></div></div></div>
+    <div class="skill-card reveal"><span class="sk-ic">💃</span><div class="sk-name">Kathak Accompaniment</div><p class="sk-desc">Accomplished accompanist for classical Kathak dance, creating symbiotic rhythmic dialogue between percussion and movement.</p><div class="sk-bar-wrap"><div class="sk-bar" data-w="90"></div></div></div>
+    <div class="skill-card reveal"><span class="sk-ic">⏱️</span><div class="sk-name">Advanced Tala Studies</div><p class="sk-desc">Scholarly expertise in complex rhythmic cycles, polyrhythms, and cross-rhythmic patterns across Hindustani classical traditions.</p><div class="sk-bar-wrap"><div class="sk-bar" data-w="92"></div></div></div>
+    <div class="skill-card reveal"><span class="sk-ic">🔬</span><div class="sk-name">Rhythm Composition &amp; Research</div><p class="sk-desc">Original compositions and doctoral-level research expanding the frontiers of Hindustani rhythm systems and music pedagogy.</p><div class="sk-bar-wrap"><div class="sk-bar" data-w="88"></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     COMPOSITIONS
+══════════════════════════════ -->
+<section id="compositions">
+  <div style="text-align:center;margin-bottom:68px" class="reveal">
+    <div class="section-lbl">✦ Original Works</div>
+    <h2 class="sec-title">Signature <span>Compositions</span></h2>
+    <div class="divider-gold"></div>
+    <p style="max-width:580px;margin:16px auto 0;font-size:17px;color:var(--muted);line-height:1.85;font-style:italic">
+      Landmark works that bridge the sacred traditions of Indian classical music with contemporary global stages.
+    </p>
+  </div>
+  <div class="comp-grid">
+    <!-- Naad Yagya -->
+    <div class="comp-card reveal">
+      <div class="vid-ph" id="naad-ph" onclick="loadYT(this,'B_T5yPcJ-pg')">
+        <div class="play-circle">▶</div>
+        <div class="vid-lbl">▶ NAAD YAGYA</div>
+        <div class="vid-sub">Click to play </div>
+      </div>
+      <div class="comp-info">
+        <div class="comp-title">Naad Yagya</div>
+        <p class="comp-desc">An internationally acclaimed rhythmic production showcasing the complexity and beauty of Indian polyrhythms through multi-instrumental collaboration. Presented on prestigious diplomatic platforms before global audiences — a testament to Dr. Shukla's compositional genius.</p>
+        <div class="tag-row">
+          <span class="ctag">POLYRHYTHM</span>
+          <span class="ctag">DIPLOMATIC STAGE</span>
+          <span class="ctag">MULTI-INSTRUMENTAL</span>
+        </div>
+      </div>
+    </div>
+    <!-- Yoga Diwas -->
+    <div class="comp-card reveal">
+      <div class="vid-ph" id="yoga-ph" onclick="loadYT(this,'VIDEO_ID_YOGA_DIWAS')">
+        <div class="play-circle">▶</div>
+        <div class="vid-lbl">▶ YOGA DIWAS MANAYEIN</div>
+        <div class="vid-sub">Click to play</div>
+      </div>
+      <div class="comp-info">
+        <div class="comp-title">Yoga Diwas Manayein</div>
+        <p class="comp-desc">A thematic musical work celebrating International Yoga Day, blending classical melodies with inspirational messaging to promote wellness and cultural harmony. A harmonious fusion of ancient tradition and contemporary celebration that resonates across cultures.</p>
+        <div class="tag-row">
+          <span class="ctag">YOGA DAY</span>
+          <span class="ctag">CLASSICAL FUSION</span>
+          <span class="ctag">WELLNESS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:28px">
+    <a href="https://www.youtube.com/@PercussionistShriKantShukla" class="btn-b" target="_blank" rel="noopener">More</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     ACADEMY
+══════════════════════════════ -->
+<section id="academy">
+  <div class="acad-inner">
+    <div style="text-align:center;margin-bottom:68px" class="reveal">
+      <div class="section-lbl">✦ Since 2002</div>
+      <h2 class="sec-title">Saraswati <span>Sangeet Academy</span></h2>
+      <div class="divider-gold"></div>
+      <p style="max-width:620px;margin:0 auto;font-size:18px;color:var(--muted);line-height:1.85;font-style:italic">Transforming Music Education for Over Two Decades — Where Tradition Meets Excellence</p>
+    </div>
+
+    <div class="acad-intro">
+      <div class="reveal">
+        <div class="acad-since">✦ ESTABLISHED 2002, LUCKNOW</div>
+        <div class="acad-txt">
+          <p>Founded by Dr. Shrikant Shukla in recognition of the need for structured and sustainable music education, Saraswati Sangeet Academy has trained hundreds of students across both offline and online platforms over more than two decades.</p>
+          <p>The academy offers a unique blend of traditional Indian classical instruction and internationally recognised certifications, making it a premier destination for serious music students.</p>
+          <p>Guided by a philosophy of inclusive and accessible music education, the academy also supports social initiatives aimed at providing music education opportunities to underprivileged students.</p>
+        </div>
+        <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
+          <a href="#contact" class="btn-a" style="font-size:10px;padding:11px 22px">🎓 Enroll Now</a>
+          <a href="#contact" class="btn-b" style="font-size:10px;padding:10px 22px">📞 Contact Academy</a>
+        </div>
+      </div>
+      <!-- <div class="ph reveal" style="aspect-ratio:4/3;min-height:280px">
+        <div class="ph-ic">🏫</div>
+        <div class="ph-lb">Academy Building / Classroom<br><small style="font-size:10px;opacity:.5">Replace with actual photo</small></div>
+      </div> -->
+    </div>
+
+    <h3 style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;text-align:center">Courses Offered</h3>
+    <div class="courses-grid">
+      <div class="course-card reveal"><span class="co-ic">🥁</span><div class="co-name">Tabla</div></div>
+      <div class="course-card reveal"><span class="co-ic">🎹</span><div class="co-name">Harmonium</div></div>
+      <div class="course-card reveal"><span class="co-ic">🎤</span><div class="co-name">Classical Vocal</div></div>
+      <div class="course-card reveal"><span class="co-ic">🎙️</span><div class="co-name">Semi-Classical Vocal</div></div>
+      <div class="course-card reveal"><span class="co-ic">🎸</span><div class="co-name">Guitar</div></div>
+      <div class="course-card reveal"><span class="co-ic">🎹</span><div class="co-name">Piano</div></div>
+      <div class="course-card reveal"><span class="co-ic">🎛️</span><div class="co-name">Keyboard / Synthesizer</div></div>
+      <div class="course-card reveal"><span class="co-ic">🥁</span><div class="co-name">Drums</div></div>
+    </div>
+
+    <div class="certs reveal">
+      <h3>Certification Pathways</h3>
+      <div class="certs-row">
+        <div class="cert-it">🎓<br><br>Visharad Examinations<br><span style="color:var(--muted);font-size:10px">Traditional Indian Music</span></div>
+        <div class="cert-it">📚<br><br>Bhatkhande Curriculum<br><span style="color:var(--muted);font-size:10px">Classical Music Studies</span></div>
+        <div class="cert-it">🇮🇳<br><br>Akhil Bharatiya Gandharva<br><span style="color:var(--muted);font-size:10px">Mahavidyalaya Certifications</span></div>
+        <div class="cert-it">🇬🇧<br><br>Trinity College London<br><span style="color:var(--muted);font-size:10px">International Music Exams</span></div>
+      </div>
+    </div>
+
+    <!-- Academy Gallery -->
+    <!-- <h3 style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0 0 22px;text-align:center">Academy Gallery</h3>
+    <div class="gal-grid" style="margin-bottom:54px">
+      <div class="gal-item feat"><div class="ph" style="height:100%;min-height:300px"><div class="ph-ic">🏫</div><div class="ph-lb">Academy Main Hall<br><small style="font-size:10px;opacity:.5">Replace with photo</small></div></div><div class="gal-ov">Academy Main Hall</div></div>
+      <div class="gal-item"><div class="ph" style="aspect-ratio:1"><div class="ph-ic">🎓</div><div class="ph-lb" style="font-size:10px">Student Practice</div></div><div class="gal-ov">Student Practice Session</div></div>
+      <div class="gal-item"><div class="ph" style="aspect-ratio:1"><div class="ph-ic">🥁</div><div class="ph-lb" style="font-size:10px">Tabla Class</div></div><div class="gal-ov">Tabla Masterclass</div></div>
+      <div class="gal-item"><div class="ph" style="aspect-ratio:1"><div class="ph-ic">🎵</div><div class="ph-lb" style="font-size:10px">Annual Concert</div></div><div class="gal-ov">Annual Student Concert</div></div>
+      <div class="gal-item"><div class="ph" style="aspect-ratio:1"><div class="ph-ic">🏆</div><div class="ph-lb" style="font-size:10px">Prize Ceremony</div></div><div class="gal-ov">Achievement Ceremony</div></div>
+    </div> -->
+
+    <div class="cta-box reveal">
+      <h3>Begin Your Musical Journey Today</h3>
+      <p>Join Dr. Shukla's academy and immerse yourself in the timeless world of Indian classical music.</p>
+      <a href="#contact" class="btn-a">🎵 Apply for Admission</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     GALLERY
+══════════════════════════════ -->
+<section id="gallery">
+  <div style="text-align:center;margin-bottom:48px" class="reveal">
+    <div class="section-lbl">✦ Visual Archive</div>
+    <h2 class="sec-title">Performance <span>Gallery</span></h2>
+    <div class="divider-gold"></div>
+  </div>
+  <div class="gal-tabs-wrap">
+    <div class="gal-tabs">
+      <button class="gal-tab active" onclick="filterGal('all',this)">All</button>
+      <button class="gal-tab" onclick="filterGal('perf',this)">Performances</button>
+      <button class="gal-tab" onclick="filterGal('ws',this)">Workshops</button>
+      <button class="gal-tab" onclick="filterGal('aw',this)">Awards</button>
+    </div>
+  </div>
+  <div class="gal-grid" id="mainGal">
+    <div class="gal-item feat" data-c="perf"><img src="uploads/img/International.avif" alt="Featured Performance"><div class="gal-ov">Grand Concert Performance</div></div>
+    <div class="gal-item" data-c="perf"><img src="uploads/img/IEG4.avif" alt="Tabla Solo"><div class="gal-ov">Tabla Solo Recital</div></div>
+    <div class="gal-item" data-c="ws"><img src="uploads/img/Perform.avif" alt="Masterclass"><div class="gal-ov">International Masterclass</div></div>
+    <div class="gal-item" data-c="aw"><img src="uploads/img/Perform 1.avif" alt="Award Night"><div class="gal-ov">DD Lucknow Award Ceremony</div></div>
+    <div class="gal-item" data-c="perf"><img src="uploads/img/performance-photo.jpeg" alt="International Stage"><div class="gal-ov">International Stage Performance</div></div>
+   
+  </div>
+  <div style="text-align:center;margin-top:28px">
+    <a href="https://www.facebook.com/shrikant.shukla.5/photos" class="btn-b" target="_blank" rel="noopener">More</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     TESTIMONIALS
+══════════════════════════════ -->
+<section id="testimonials">
+  <div style="text-align:center;margin-bottom:68px" class="reveal">
+    <div class="section-lbl">✦ Words of Appreciation</div>
+    <h2 class="sec-title">What Others <span>Say</span></h2>
+    <div class="divider-gold"></div>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal"><span class="qt">"</span><p class="testi-txt">Dr. Shukla's command over the tabla is nothing short of extraordinary. His performance transported the entire audience to another realm — a true master of the Lucknow Gharana tradition.</p><div class="testi-rule"></div><div class="testi-auth"><div class="auth-av">👤</div><div><div class="auth-nm">Dr. Pradeep Singh Rajpurohit</div><div class="auth-rl">Cultural Scholar</div></div></div></div>
+    <div class="testi-card reveal"><span class="qt">"</span><p class="testi-txt">Witnessing Naad Yagya was a transformative experience. The rhythmic complexity woven with artistic grace is a hallmark of Dr. Shukla's compositional vision — a cultural treasure for India.</p><div class="testi-rule"></div><div class="testi-auth"><div class="auth-av">👤</div><div><div class="auth-nm">International Music Delegate</div><div class="auth-rl">Cultural Festival, Europe</div></div></div></div>
+    <div class="testi-card reveal"><span class="qt">"</span><p class="testi-txt">Saraswati Sangeet Academy transformed my relationship with music. Dr. Shukla's teaching combines rigorous classical technique with genuine warmth and patience. The best decision of my life.</p><div class="testi-rule"></div><div class="testi-auth"><div class="auth-av">👤</div><div><div class="auth-nm">Priya Sharma</div><div class="auth-rl">Student — Tabla, Batch 2019</div></div></div></div>
+    <div class="testi-card reveal"><span class="qt">"</span><p class="testi-txt">His masterclass opened our students' eyes to the mathematical beauty of Indian rhythm. Dr. Shukla is not just a performer — he is a living bridge between ancient wisdom and the modern world.</p><div class="testi-rule"></div><div class="testi-auth"><div class="auth-av">👤</div><div><div class="auth-nm">Prof. James Richardson</div><div class="auth-rl">Music Dept., International University</div></div></div></div>
+    <div class="testi-card reveal"><span class="qt">"</span><p class="testi-txt">His Yoga Diwas composition captured the essence of our nation's heritage in a way that resonated deeply with audiences from every cultural background. A truly gifted artist and ambassador.</p><div class="testi-rule"></div><div class="testi-auth"><div class="auth-av">👤</div><div><div class="auth-nm">Cultural Affairs Representative</div><div class="auth-rl">Government of India Initiative</div></div></div></div>
+    <div class="testi-card reveal"><span class="qt">"</span><p class="testi-txt">Training at Saraswati Sangeet Academy gave me not just musical skills but a deep cultural identity. Guruji's method blends tradition, discipline, and heart in equal measure.</p><div class="testi-rule"></div><div class="testi-auth"><div class="auth-av">👤</div><div><div class="auth-nm">Arjun Mishra</div><div class="auth-rl">Advanced Student — Farrukhabad Tabla</div></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     CONTACT
+══════════════════════════════ -->
+<section id="contact">
+  <div class="ct-inner">
+    <div style="text-align:center;margin-bottom:68px" class="reveal">
+      <div class="section-lbl">✦ Get in Touch</div>
+      <h2 class="sec-title">Book a Performance or <span>Join the Academy</span></h2>
+      <div class="divider-gold"></div>
+    </div>
+    <div class="ct-grid">
+      <div class="reveal">
+        <h3>Contact Information</h3>
+        <div class="ct-row"><div class="ct-ic">📍</div><div><span class="ct-lbl">Location</span><span class="ct-val">Lucknow, Uttar Pradesh, India</span></div></div>
+        <div class="ct-row"><div class="ct-ic">🏫</div><div><span class="ct-lbl">Academy</span><span class="ct-val">Saraswati Sangeet Academy<br><small style="opacity:.65">International Admissions & Enquiries</small></span></div></div>
+        <div class="ct-row"><div class="ct-ic">🌐</div><div><span class="ct-lbl">International Affairs</span><span class="ct-val">Official International Cultural Affairs Office<br><small style="opacity:.65">ICCR — Indian Council for Cultural Relations</small></span></div></div>
+        <div class="ct-row"><div class="ct-ic">📧</div><div><span class="ct-lbl">Email</span><span class="ct-val"><a href="mailto:shritabla22@gmail.com" style="color:inherit;text-decoration:none">shritabla22@gmail.com</a></span></div></div>
+        <div class="ct-row"><div class="ct-ic">📞</div><div><span class="ct-lbl">Phone / WhatsApp</span><span class="ct-val"><a href="tel:+919839092023" style="color:inherit;text-decoration:none">+91 98390 92023</a> · <a href="https://wa.me/919839092023" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">WhatsApp</a></span></div></div>
+
+        <div style="margin-top:28px">
+          <h3 style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:14px">Follow on Social Media</h3>
+          <div class="socials">
+            <a href="https://www.youtube.com/@PercussionistShriKantShukla" class="soc-a" title="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/shrikant.shukla.5" class="soc-a" title="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/919839092023" class="soc-a" title="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="avail-box">
+          <div class="avail-box-hd">Available For</div>
+          <div class="avail-tags">
+            <span class="a-tag">CONCERTS</span><span class="a-tag">MASTERCLASSES</span><span class="a-tag">WORKSHOPS</span>
+            <span class="a-tag">INTERNATIONAL TOURS</span><span class="a-tag">UNIVERSITY RESIDENCIES</span>
+            <span class="a-tag">CULTURAL DIPLOMACY</span><span class="a-tag">RESEARCH SEMINARS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ct-form reveal">
+        <h3>Send an Enquiry</h3>
+        <div class="fg-row">
+          <div class="fg"><label>First Name</label><input type="text" placeholder="Your first name"></div>
+          <div class="fg"><label>Last Name</label><input type="text" placeholder="Your last name"></div>
+        </div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 or international number"></div>
+        <div class="fg"><label>Enquiry Type</label>
+          <select>
+            <option value="">Select enquiry type…</option>
+            <option>Book a Performance / Concert</option>
+            <option>International Tour / Event</option>
+            <option>Masterclass / Workshop</option>
+            <option>Academy Admission — Tabla</option>
+            <option>Academy Admission — Vocal</option>
+            <option>Academy Admission — Other Instrument</option>
+            <option>Research Collaboration</option>
+            <option>Media / Press Enquiry</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg"><label>Country / City</label><input type="text" placeholder="Your country or city"></div>
+        <div class="fg"><label>Message</label><textarea placeholder="Tell us about your event, requirements, or questions…"></textarea></div>
+        <button class="btn-a" style="width:100%;justify-content:center" onclick="submitForm(this)">✦ Send Enquiry</button>
+        <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:14px;font-style:italic">We respond within 24–48 hours. All enquiries are confidential.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <span class="ft-logo">Dr. Shrikant Shukla</span>
+      <div class="ft-tl">TABLA MAESTRO · SCHOLAR · CULTURAL AMBASSADOR</div>
+      <p class="ft-p">Preserving tradition, inspiring generations, and connecting cultures through the timeless language of rhythm. ICCR Cultural Envoy · Lucknow Gharana · Saraswati Sangeet Academy.</p>
+     <div class="socials">
+            <a href="https://www.youtube.com/@PercussionistShriKantShukla" class="soc-a" title="YouTube" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.facebook.com/shrikant.shukla.5" class="soc-a" title="Facebook" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/919839092023" class="soc-a" title="WhatsApp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+    </div>
+    <div class="ft-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#about">About Dr. Shukla</a></li>
+        <li><a href="#achievements">Awards & Honours</a></li>
+        <li><a href="#international">International Presence</a></li>
+        <li><a href="#expertise">Musical Expertise</a></li>
+        <li><a href="#compositions">Compositions</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Academy</h4>
+      <ul>
+        <li><a href="https://ssmonline.in/" target="_blank" rel="noopener">Visit Academy</a></li>
+        <li><a href="#academy">About the Academy</a></li>
+        <li><a href="#academy">Courses Offered</a></li>
+        <li><a href="#academy">Certifications</a></li>
+        <li><a href="#contact">Student Admissions</a></li>
+        <li><a href="#contact">Online Classes</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Book & Connect</h4>
+      <ul>
+        <li><a href="#contact">Book Performance</a></li>
+        <li><a href="#contact">Masterclass Booking</a></li>
+        <li><a href="#contact">Press & Media</a></li>
+        <li><a href="#contact">International Tours</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p>© 2026 <span class="gd">Dr. Shrikant Shukla</span> · <span class="gd">Saraswati Sangeet Academy</span>, Lucknow · All Rights Reserved</p>
+    <p style="margin-top:7px;opacity:.5;font-size:11px">"Preserving Tradition. Inspiring Generations. Connecting Cultures Through Rhythm." 🎶</p>
+  </div>
+</footer>
+<button type="button" class="top-btn" id="scrollTopButton" aria-label="Scroll to top">↑</button>
+
+<script>
+// ── SPLASH ──────────────────────────
+(function(){
+  var c = document.getElementById('spParticles');
+  for(var i=0;i<45;i++){
+    var p = document.createElement('div');
+    p.className='sp-p';
+    var sz = (Math.random()*3+1)+'px';
+    p.style.cssText='left:'+Math.random()*100+'%;width:'+sz+';height:'+sz+
+      ';background:rgba(212,175,55,'+(Math.random()*.6+.3)+');animation-duration:'+
+      (Math.random()*4+3)+'s;animation-delay:'+Math.random()*4+'s';
+    c.appendChild(p);
+  }
+})();
+document.body.style.overflow='hidden';
+var splashAudio = document.getElementById('splashAudio');
+var splashMusicStarted = false;
+var splashHidden = false;
+function startSplashMusic(){
+  if(!splashAudio || splashMusicStarted) return;
+  splashMusicStarted = true;
+  splashAudio.volume = 0.32;
+  splashAudio.loop = true;
+  splashAudio.load();
+  var playPromise = splashAudio.play();
+  if(playPromise !== undefined && typeof playPromise.then === 'function'){
+    playPromise.catch(function(){
+      document.addEventListener('pointerdown', function retryAudio(){
+        splashAudio.play().catch(function(){});
+        document.removeEventListener('pointerdown', retryAudio);
+      }, {once:true});
+    });
+  }
+}
+function hideSplash(){
+  if(splashHidden) return;
+  splashHidden = true;
+  var splash = document.getElementById('splash');
+  if(splash){ splash.classList.add('gone'); }
+  document.body.style.overflow='auto';
+  if(splashAudio){
+    try{
+      splashAudio.pause();
+      splashAudio.currentTime = 0;
+      splashAudio.loop = false;
+    }catch(e){}
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  var splash = document.getElementById('splash');
+  if(splash){
+    splash.addEventListener('click', startSplashMusic, {once:true});
+    splash.addEventListener('touchstart', startSplashMusic, {once:true});
+  }
+  document.addEventListener('pointerdown', startSplashMusic, {once:true});
+  startSplashMusic();
+});
+
+setTimeout(hideSplash,4300);
+
+// ── NAV ─────────────────────────────
+window.addEventListener('scroll',function(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>55);
+  var btn = document.getElementById('scrollTopButton');
+  if(btn){btn.classList.toggle('show',window.scrollY>320)};
+  // active link highlight
+  var secs = document.querySelectorAll('section[id]');
+  var cur='';
+  secs.forEach(function(s){if(window.scrollY>=s.offsetTop-180)cur=s.id});
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.style.color = a.getAttribute('href')==='#'+cur ? 'var(--gold)' : '';
+  });
+});
+
+var __topBtn = document.getElementById('scrollTopButton');
+if(__topBtn){
+  __topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+}
+
+// ── MOBILE MENU ──────────────────────
+(function(){
+  var mobMenu = document.getElementById('mobMenu');
+  var hamBtn = document.getElementById('hamBtn');
+  var mobClose = document.getElementById('mobClose');
+  function closeMob(){ if(mobMenu){ mobMenu.classList.remove('open'); }}
+  if(hamBtn && mobMenu){
+    hamBtn.addEventListener('click', function(){ mobMenu.classList.add('open'); });
+    mobMenu.addEventListener('click', function(evt){ if(evt.target===mobMenu){ closeMob(); }});
+  }
+  if(mobClose){ mobClose.addEventListener('click', closeMob); }
+  window.closeMob = closeMob;
+})();
+
+// ── REVEAL ──────────────────────────
+var ro = new IntersectionObserver(function(entries){
+  entries.forEach(function(e,i){
+    if(e.isIntersecting){
+      setTimeout(function(){
+        e.target.classList.add('visible');
+        var bar=e.target.querySelector('.sk-bar');
+        if(bar){var w=bar.dataset.w||'0';bar.style.width='0';setTimeout(function(){bar.style.width=w+'%'},80)}
+      },i*90);
+      ro.unobserve(e.target);
+    }
+  });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){ro.observe(el)});
+
+// ── GALLERY FILTER ───────────────────
+function filterGal(cat,btn){
+  document.querySelectorAll('.gal-tab').forEach(function(t){t.classList.remove('active')});
+  btn.classList.add('active');
+  document.querySelectorAll('#mainGal .gal-item').forEach(function(it){
+    it.style.display=(cat==='all'||it.dataset.c===cat)?'':'none';
+  });
+}
+
+// ── YOUTUBE LOADER ───────────────────
+function loadYT(ph,id){
+  if(id.startsWith('VIDEO_ID')){
+    ph.innerHTML='<div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:32px">'
+      +'<div style="font-size:38px">🎵</div>'
+      +'<div style="font-family:Cinzel,serif;font-size:11px;letter-spacing:.18em;color:var(--gold);text-align:center">'
+      +'Replace the placeholder ID<br>with the actual YouTube video ID</div></div>';
+    return;
+  }
+  var f=document.createElement('iframe');
+  f.src='https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0';
+  f.allow='accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture';
+  f.allowFullscreen=true;
+  f.style.cssText='width:100%;height:100%;border:none;display:block';
+  ph.parentNode.replaceChild(f,ph);
+}
+
+// ── FORM ─────────────────────────────
+function submitForm(btn){
+  var orig=btn.textContent;
+  btn.textContent='✓ Enquiry Sent Successfully!';
+  btn.style.background='linear-gradient(135deg,#1b5e3b,#2e7d5c)';
+  setTimeout(function(){btn.textContent=orig;btn.style.background=''},3200);
+}
+</script>
+</body>
+</html>
