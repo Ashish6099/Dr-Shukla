@@ -408,6 +408,41 @@ footer{background:var(--dark);border-top:1px solid rgba(212,175,55,.14);padding:
 }
 .top-btn.show{opacity:1;visibility:visible;transform:translateY(0)}
 .top-btn:hover{transform:translateY(-2px);box-shadow:0 20px 36px rgba(0,0,0,.4)}
+
+/* ── LIGHTBOX / MODAL FOR IMAGES ───────────────── */
+#imgModal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(10,5,8,.88);z-index:2000;padding:28px}
+#imgModal.open{display:flex}
+#imgModal .modal-content{max-width:calc(100% - 120px);max-height:calc(100% - 120px);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+#imgModal img{max-width:100%;max-height:80vh;border-radius:8px;box-shadow:0 24px 80px rgba(0,0,0,.6)}
+#imgModal .close-btn{position:absolute;top:-12px;right:-12px;background:var(--gold);color:var(--dark);border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:700;border:0}
+#imgModal .caption{margin-top:14px;color:var(--ivory-d);font-size:13px;text-align:center;max-width:92%}
+
+.gal-item img,.ev-img img,.about-img-stack img,.media-item img{cursor:zoom-in}
+#imgModal.open .modal-content img{cursor:zoom-out}
+
+/* ── LATEST EVENTS + MEDIA COVERAGE ───────────────── */
+.latest-events{padding:80px 80px;background:linear-gradient(180deg,var(--dark),var(--dark-m))}
+.events-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1200px;margin:0 auto}
+.event-card{background:rgba(18,8,12,.74);border:1px solid var(--border);padding:16px;display:flex;flex-direction:column;gap:12px;transition:transform .28s,box-shadow .28s}
+.event-card:hover{transform:translateY(-6px);box-shadow:0 22px 60px rgba(0,0,0,.5)}
+.event-card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.event-meta{font-size:12px;color:var(--muted);letter-spacing:.12em}
+.event-title{font-family:'Cinzel Decorative',serif;color:var(--gold);font-size:16px}
+.event-excerpt{font-size:14px;color:var(--ivory-d);line-height:1.6}
+
+.media-coverage{padding:80px 80px;background:linear-gradient(180deg,var(--dark-m),var(--dark))}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1200px;margin:0 auto}
+.media-item{background:rgba(18,8,12,.66);border:1px solid var(--border);padding:14px;display:flex;gap:12px;align-items:flex-start}
+.media-item img{width:72px;height:72px;object-fit:cover;border-radius:6px;flex-shrink:0}
+.media-info{display:flex;flex-direction:column;gap:6px}
+.media-title{font-size:13px;color:var(--gold);font-family:'Cinzel',serif}
+.media-src{font-size:12px;color:var(--muted)}
+.media-date{font-size:12px;color:var(--muted);opacity:.9}
+
+@media(max-width:760px){
+  .latest-events,.media-coverage{padding:48px 20px}
+  .event-card img{height:140px}
+}
 </style>
 </head>
 <body>
@@ -710,6 +745,7 @@ footer{background:var(--dark);border-top:1px solid rgba(212,175,55,.14);padding:
 
     <h3 style="font-family:'Cinzel',serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;text-align:center">International Events Gallery</h3>
     <div class="events-row reveal">
+            <div class="ev-img"><img src="uploads/img/IEG5.avif" ><div class="ph" style="aspect-ratio:4/3"><div class="ph-ic">🌍</div><div class="ph-lb"><br><small style="font-size:10px;opacity:.55">Event Photo</small></div></div><div class="ev-ov"></div></div>
       <div class="ev-img"><img src="uploads/img/IEG 3.avif" ><div class="ph" style="aspect-ratio:4/3"><div class="ph-ic">🌍</div><div class="ph-lb"><br><small style="font-size:10px;opacity:.55">Event Photo</small></div></div><div class="ev-ov"></div></div>
       <div class="ev-img"><img src="uploads/img/IEG2.avif" ><div class="ph" style="aspect-ratio:4/3"><div class="ph-ic">🎪</div><div class="ph-lb"><br><small style="font-size:10px;opacity:.55">Event Photo</small></div></div><div class="ev-ov"></div></div>
       <div class="ev-img"><img src="uploads/img/IEG 1.avif" ><div class="ph" style="aspect-ratio:4/3"><div class="ph-ic">🎓</div><div class="ph-lb"><br><small style="font-size:10px;opacity:.55">Event Photo</small></div></div><div class="ev-ov"></div></div>
@@ -718,6 +754,87 @@ footer{background:var(--dark);border-top:1px solid rgba(212,175,55,.14);padding:
     <div style="text-align:center;margin-top:28px">
       <a href="https://www.facebook.com/shrikant.shukla.5/photos" class="btn-b" target="_blank" rel="noopener">More</a>
     </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     LATEST EVENTS
+══════════════════════════════ -->
+<section id="latestEvents" class="latest-events">
+  <div style="text-align:center;margin-bottom:28px" class="reveal">
+    <div class="section-lbl">✦ Recent</div>
+    <h2 class="sec-title">Latest <span>Events</span></h2>
+    <div class="divider-gold"></div>
+  </div>
+  <div class="events-grid reveal">
+    <article class="event-card">
+      <img src="uploads/img/IEG5.avif" alt="Naad Yagya Festival">
+      <div class="event-meta">Feb 2026 · International Festival</div>
+      <div class="event-title">Naad Yagya — International Rhythms Festival</div>
+      <p class="event-excerpt">A landmark performance blending tabla ensembles and cross-cultural collaborations at the Naad Yagya festival.</p>
+      <div style="margin-top:auto;text-align:right"><a class="btn-b" href="#" target="_blank" rel="noopener">Details</a></div>
+    </article>
+
+    <article class="event-card">
+      <img src="uploads/img/IEG4.avif" alt="Diplomatic Cultural Evening">
+      <div class="event-meta">Nov 2025 · Diplomatic Event</div>
+      <div class="event-title">Cultural Diplomacy — Embassy Gala</div>
+      <p class="event-excerpt">Featured performance at a diplomatic gala curated by cultural affairs, showcasing India's classical music heritage.</p>
+      <div style="margin-top:auto;text-align:right"><a class="btn-b" href="#" target="_blank" rel="noopener">Details</a></div>
+    </article>
+
+    <article class="event-card">
+      <img src="uploads/img/Perform.avif" alt="Masterclass Series">
+      <div class="event-meta">Aug 2025 · Masterclass</div>
+      <div class="event-title">International Masterclass Series</div>
+      <p class="event-excerpt">A week-long masterclass series for advanced percussion students and scholars, covering tala theory and solo repertoire.</p>
+      <div style="margin-top:auto;text-align:right"><a class="btn-b" href="#" target="_blank" rel="noopener">Enroll</a></div>
+    </article>
+  </div>
+  <div style="text-align:center;margin-top:22px">
+    <a href="#events" class="btn-a">See All Events</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     MEDIA COVERAGE
+══════════════════════════════ -->
+<section id="mediaCoverage" class="media-coverage">
+  <div style="text-align:center;margin-bottom:28px" class="reveal">
+    <div class="section-lbl">✦ Press</div>
+    <h2 class="sec-title">Media <span>Coverage</span></h2>
+    <div class="divider-gold"></div>
+  </div>
+  <div class="media-grid reveal" id="mediaGrid">
+    <div class="media-item" data-href="https://www.facebook.com/shrikant.shukla.5">
+      <img src="uploads/img/Award.avif" alt="Featured on Cultural Spotlight">
+      <div class="media-info">
+        <div class="media-title">Featured on Cultural Spotlight</div>
+        <div class="media-src">Cultural Times · Oct 2025</div>
+        <div class="media-date"><a class="btn-b" href="https://www.facebook.com/shrikant.shukla.5" target="_blank" rel="noopener">Read more</a></div>
+      </div>
+    </div>
+
+    <div class="media-item" data-href="https://www.youtube.com/@PercussionistShriKantShukla">
+      <img src="uploads/img/IEG2.avif" alt="Naad Yagya — Full Concert">
+      <div class="media-info">
+        <div class="media-title">Naad Yagya — Full Concert (YouTube)</div>
+        <div class="media-src">YouTube · Mar 2026</div>
+        <div class="media-date"><a class="btn-b" href="https://www.youtube.com/@PercussionistShriKantShukla" target="_blank" rel="noopener">Watch</a></div>
+      </div>
+    </div>
+
+    <div class="media-item" data-href="https://www.facebook.com/shrikant.shukla.5/photos">
+      <img src="uploads/img/International.avif" alt="Photo Essay: Global Performances">
+      <div class="media-info">
+        <div class="media-title">Photo Essay: Global Performances</div>
+        <div class="media-src">Facebook · Feb 2026</div>
+        <div class="media-date"><a class="btn-b" href="https://www.facebook.com/shrikant.shukla.5/photos" target="_blank" rel="noopener">View gallery</a></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:22px">
+    <a href="https://www.facebook.com/shrikant.shukla.5" class="btn-b" target="_blank" rel="noopener">More Media</a>
   </div>
 </section>
 
@@ -884,8 +1001,9 @@ footer{background:var(--dark);border-top:1px solid rgba(212,175,55,.14);padding:
   <div class="gal-grid" id="mainGal">
     <div class="gal-item feat" data-c="perf"><img src="uploads/img/International.avif" alt="Featured Performance"><div class="gal-ov">Grand Concert Performance</div></div>
     <div class="gal-item" data-c="perf"><img src="uploads/img/IEG4.avif" alt="Tabla Solo"><div class="gal-ov">Tabla Solo Recital</div></div>
-    <div class="gal-item" data-c="ws"><img src="uploads/img/Perform.avif" alt="Masterclass"><div class="gal-ov">International Masterclass</div></div>
-    <div class="gal-item" data-c="aw"><img src="uploads/img/Perform 1.avif" alt="Award Night"><div class="gal-ov">DD Lucknow Award Ceremony</div></div>
+    <div class="gal-item" data-c="ws"><img src="uploads/img/Perform.avif" alt="Performance"><div class="gal-ov">International Masterclass</div></div>
+    <div class="gal-item" data-c="aw"><img src="uploads/img/Award.avif" alt="Awards"><div class="gal-ov">Awards</div></div>
+    <div class="gal-item" data-c="aw"><img src="uploads/img/Perform 1.avif" alt="Students"><div class="gal-ov">Ceremony</div></div>
     <div class="gal-item" data-c="perf"><img src="uploads/img/performance-photo.jpeg" alt="International Stage"><div class="gal-ov">International Stage Performance</div></div>
    
   </div>
@@ -984,6 +1102,15 @@ footer{background:var(--dark);border-top:1px solid rgba(212,175,55,.14);padding:
 <!-- ══════════════════════════════
      FOOTER
 ══════════════════════════════ -->
+<!-- Image lightbox modal -->
+<div id="imgModal" aria-hidden="true" role="dialog">
+  <div class="modal-content">
+    <button class="close-btn" aria-label="Close image">✕</button>
+    <img src="" alt="">
+    <div class="caption"></div>
+  </div>
+</div>
+
 <footer>
   <div class="ft-grid">
     <div>
@@ -1177,6 +1304,47 @@ function submitForm(btn){
   btn.style.background='linear-gradient(135deg,#1b5e3b,#2e7d5c)';
   setTimeout(function(){btn.textContent=orig;btn.style.background=''},3200);
 }
+
+// ── SIMPLE LIGHTBOX FOR GALLERY IMAGES ─────────────────
+(function(){
+  var modal = document.getElementById('imgModal');
+  if(!modal) return;
+  var modalImg = modal.querySelector('img');
+  var caption = modal.querySelector('.caption');
+  var closeBtn = modal.querySelector('.close-btn');
+
+  function openModal(src, alt){
+    modalImg.src = src;
+    modalImg.alt = alt || '';
+    caption.textContent = alt || '';
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    // clear src to free memory
+    setTimeout(function(){ modalImg.src = '' },200);
+  }
+
+  // Click on any image inside gallery, events, or about image stack
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(t === closeBtn) { closeModal(); return; }
+    if(t.tagName === 'IMG' && (t.closest('#gallery') || t.closest('.events-row') || t.closest('.about-img-stack') || t.closest('#mediaCoverage') || t.closest('#mediaGrid'))){
+      e.preventDefault();
+      openModal(t.src, t.alt);
+      return;
+    }
+    // click outside image closes modal
+    if(t === modal){ closeModal(); }
+  }, false);
+
+  // ESC to close
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+})();
 </script>
 </body>
 </html>
